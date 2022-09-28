@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "83d3aa6f-a6c4-46b2-a4bd-9a78fb453084",
+		"name": "url-shortener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "resolve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "urlshortener.eastus.cloudapp.azure.com/r/96d4f334",
+					"host": [
+						"urlshortener",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"path": [
+						"r",
+						"96d4f334"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Url\": \"https://hub.docker.com/repository/docker/rohatsagar/cloudcomp15_sose22/general\",\r\n    \"ShouldExpire\": false,\r\n    \"Expiry\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "urlshortener.eastus.cloudapp.azure.com/generate",
+					"host": [
+						"urlshortener",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
