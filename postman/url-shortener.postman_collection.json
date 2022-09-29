@@ -34,7 +34,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Url\": \"https://hub.docker.com/repository/docker/rohatsagar/cloudcomp15_sose22/general\",\r\n    \"ShouldExpire\": false,\r\n    \"Expiry\": null\r\n}",
+					"raw": "{\r\n    \"Url\": \"https://hub.docker.com/repository/docker/rohatsagar/cloudcomp15_sose22\",\r\n    \"ShouldExpire\": false,\r\n    \"Expiry\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
