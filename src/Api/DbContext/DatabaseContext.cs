@@ -25,7 +25,6 @@ public class DatabaseContext : DbContext
 
             x.Property(e => e.Original);
             x.Property(e => e.Shorten);
-            x.Property(e => e.ShouldExpire);
             x.Property(e => e.Expiry);
         });
     }
