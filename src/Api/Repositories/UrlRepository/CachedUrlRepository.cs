@@ -23,7 +23,10 @@ public class CachedUrlRepository : IUrlRepository
     {
         var url = await _distributedCache.GetRecordAsync<Url>(shortenUrl);
 
-        if (url is not null) return url;
+        if (url is not null)
+        {
+            return url.IsExpired() ? null : url;
+        }
 
         url = await _fallbackRepository.GetByShortenUrlAsync(shortenUrl);
 

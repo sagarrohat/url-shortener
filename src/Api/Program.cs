@@ -61,7 +61,6 @@ app.MapPost("/generate",
             {
                 Original = generateRequest.Url,
                 Shorten = shortenUrl,
-                ShouldExpire = generateRequest.ShouldExpire,
                 Expiry = generateRequest.Expiry?.ToUniversalTime()
             });
         }

@@ -21,6 +21,9 @@ public class UrlRepository : IUrlRepository
 
     public async Task<Url?> GetByShortenUrlAsync(string shortenUrl)
     {
-        return await _databaseContext.Urls.Where(x => x.Shorten == shortenUrl).FirstOrDefaultAsync();
+        return await _databaseContext.Urls
+            .Where(x => x.IsExpired() == false)
+            .Where(x => x.Shorten == shortenUrl)
+            .FirstOrDefaultAsync();
     }
 }
